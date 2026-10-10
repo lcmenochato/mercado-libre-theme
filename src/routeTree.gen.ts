@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as PagamentoRouteImport } from './routes/pagamento'
+import { Route as Upsell1RouteImport } from './routes/upsell1'
+import { Route as Upsell2RouteImport } from './routes/upsell2'
+import { Route as Upsell3RouteImport } from './routes/upsell3'
+import { Route as Upsell4RouteImport } from './routes/upsell4'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObrigadoRoute = ObrigadoRouteImport.update({
+  id: '/obrigado',
+  path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagamentoRoute = PagamentoRouteImport.update({
+  id: '/pagamento',
+  path: '/pagamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Upsell1Route = Upsell1RouteImport.update({
+  id: '/upsell1',
+  path: '/upsell1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Upsell2Route = Upsell2RouteImport.update({
+  id: '/upsell2',
+  path: '/upsell2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Upsell3Route = Upsell3RouteImport.update({
+  id: '/upsell3',
+  path: '/upsell3',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Upsell4Route = Upsell4RouteImport.update({
+  id: '/upsell4',
+  path: '/upsell4',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/obrigado': typeof ObrigadoRoute
+  '/pagamento': typeof PagamentoRoute
+  '/upsell1': typeof Upsell1Route
+  '/upsell2': typeof Upsell2Route
+  '/upsell3': typeof Upsell3Route
+  '/upsell4': typeof Upsell4Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/obrigado': typeof ObrigadoRoute
+  '/pagamento': typeof PagamentoRoute
+  '/upsell1': typeof Upsell1Route
+  '/upsell2': typeof Upsell2Route
+  '/upsell3': typeof Upsell3Route
+  '/upsell4': typeof Upsell4Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/obrigado': typeof ObrigadoRoute
+  '/pagamento': typeof PagamentoRoute
+  '/upsell1': typeof Upsell1Route
+  '/upsell2': typeof Upsell2Route
+  '/upsell3': typeof Upsell3Route
+  '/upsell4': typeof Upsell4Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/obrigado'
+    | '/pagamento'
+    | '/upsell1'
+    | '/upsell2'
+    | '/upsell3'
+    | '/upsell4'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/obrigado'
+    | '/pagamento'
+    | '/upsell1'
+    | '/upsell2'
+    | '/upsell3'
+    | '/upsell4'
+  id:
+    | '__root__'
+    | '/'
+    | '/obrigado'
+    | '/pagamento'
+    | '/upsell1'
+    | '/upsell2'
+    | '/upsell3'
+    | '/upsell4'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ObrigadoRoute: typeof ObrigadoRoute
+  PagamentoRoute: typeof PagamentoRoute
+  Upsell1Route: typeof Upsell1Route
+  Upsell2Route: typeof Upsell2Route
+  Upsell3Route: typeof Upsell3Route
+  Upsell4Route: typeof Upsell4Route
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obrigado': {
+      id: '/obrigado'
+      path: '/obrigado'
+      fullPath: '/obrigado'
+      preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pagamento': {
+      id: '/pagamento'
+      path: '/pagamento'
+      fullPath: '/pagamento'
+      preLoaderRoute: typeof PagamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upsell1': {
+      id: '/upsell1'
+      path: '/upsell1'
+      fullPath: '/upsell1'
+      preLoaderRoute: typeof Upsell1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upsell2': {
+      id: '/upsell2'
+      path: '/upsell2'
+      fullPath: '/upsell2'
+      preLoaderRoute: typeof Upsell2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upsell3': {
+      id: '/upsell3'
+      path: '/upsell3'
+      fullPath: '/upsell3'
+      preLoaderRoute: typeof Upsell3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upsell4': {
+      id: '/upsell4'
+      path: '/upsell4'
+      fullPath: '/upsell4'
+      preLoaderRoute: typeof Upsell4RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ObrigadoRoute: ObrigadoRoute,
+  PagamentoRoute: PagamentoRoute,
+  Upsell1Route: Upsell1Route,
+  Upsell2Route: Upsell2Route,
+  Upsell3Route: Upsell3Route,
+  Upsell4Route: Upsell4Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

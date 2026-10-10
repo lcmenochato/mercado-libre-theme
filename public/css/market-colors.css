@@ -1,0 +1,32 @@
+:root {
+  --market-yellow: oklch(0.963 0.183 102);
+  --market-blue: oklch(0.614 0.195 258);
+  --market-blue-dark: oklch(0.51 0.19 258);
+  --market-blue-light: oklch(0.955 0.022 258);
+  --market-ink: oklch(0.32 0 0);
+  --market-paper: oklch(1 0 0);
+  --pann-primary: var(--market-blue);
+  --pann-sale: var(--market-blue);
+  --pann-accent: var(--market-blue-light);
+  --pann-accent-fg: var(--market-blue);
+  --primary: var(--market-blue);
+  --primary-foreground: var(--market-paper);
+  --ring: var(--market-blue);
+  --color-rose-50: var(--market-blue-light);
+  --color-rose-100: var(--market-blue-light);
+  --color-rose-200: oklch(0.85 0.07 258);
+  --color-rose-400: var(--market-blue);
+  --color-rose-500: var(--market-blue);
+  --color-rose-600: var(--market-blue-dark);
+  --color-rose-700: var(--market-blue-dark);
+}
+header, .top { background: var(--market-yellow) !important; border-color: var(--market-yellow) !important; color: var(--market-ink) !important; }
+section[style*="hsl(347"] { background: var(--market-yellow) !important; color: var(--market-ink) !important; }
+[style*="background:#fff5f7"], [style*="background: #fff5f7"] { background: var(--market-blue-light) !important; }
+[style*="background:linear-gradient(135deg,#ff4b5c"], [style*="background: linear-gradient(135deg,#ff4b5c"] { background: var(--market-blue) !important; }
+.tt-btn, .cta, .btn-primary, .buy, .accept, .btn-yes, #lv-copy-pix { background: var(--market-blue) !important; color: var(--market-paper) !important; }
+#lv-color-cta:not(:disabled) { background: var(--market-blue) !important; color: var(--market-paper) !important; }
+.tt-input:focus { border-color: var(--market-blue) !important; }
+[style*="background:#f43f5e"], [style*="background: #f43f5e"], [style*="background:#e11d48"], [style*="background: #e11d48"], [style*="background:#ff3d67"], [style*="background: #ff3d67"] { background: var(--market-blue) !important; }
+.lv-disc { background: var(--market-blue) !important; }
+.price, .new-price, .offer-price { color: var(--market-blue) !important; }

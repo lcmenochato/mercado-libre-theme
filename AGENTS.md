@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Preserve uploaded funnel pages in isolated frames served from public/original, with TanStack leaf routes; this keeps original markup and browser interactions unchanged.
+- Apply the uploaded site's color changes through public/css/market-colors.css; one shared palette preserves original geometry and media.
